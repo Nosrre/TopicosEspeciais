@@ -8,8 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name="Status")
+@Getter @Setter
 public class Status {
 	
 	@Id
@@ -34,42 +38,5 @@ public class Status {
 	
     @OneToOne(mappedBy = "Status")
     private Personagem personagem;
-	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public int getAtk() {
-		return atk;
-	}
-	public void setAtk(int atk) {
-		this.atk = atk;
-	}
-	public int getDef() {
-		return def;
-	}
-	public void setDef(int def) {
-		this.def = def;
-	}
-	public int getAgi() {
-		return agi;
-	}
-	public void setAgi(int agi) {
-		this.agi = agi;
-	}
-	public int getIntel() {
-		return intel;
-	}
-	public void setIntel(int intel) {
-		this.intel = intel;
-	}
-	public int getArc() {
-		return arc;
-	}
-	public void setArc(int arc) {
-		this.arc = arc;
-	}
 	
 }
